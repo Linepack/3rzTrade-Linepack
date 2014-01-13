@@ -1,0 +1,72 @@
+
+Starting report CRM [Fri Jan 10 17:38:16 2014] ...
+REP-0110: Unable to open file 'CRM'.
+REP-1070: Error while opening or saving a document.
+REP-0110: Unable to open file 'CRM'.
+End report CRM [Fri Jan 10 17:38:16 2014].
+
+Starting report CRM [Fri Jan 10 17:38:56 2014] ...
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+select decode ( : tp_quebra , 'R' , a . dt_retorno , a . dt_hr ) dt_quebra , decode ( : tp_quebra , 'R' , 'Data Retorno: ' , 'Data Contato: ' ) quebra_prompt , a . dt_hr , a . dt_retorno , a . cd_cliente , b . ds_fantasia , a . cd_vendedor , c . nm_v
+End report CRM [Fri Jan 10 17:39:05 2014].
+
+Starting report CRM [Fri Jan 10 17:40:05 2014] ...
+ORA-00904: "DEC": invalid identifier
+select decode ( : tp_quebra , 'R' , a . dt_retorno , a . dt_hr ) dt_quebra , decode ( : tp_quebra , 'R' , 'Data Retorno: ' , 'Data Contato: ' ) quebra_prompt , a . dt_hr , a . dt_retorno , a . cd_cliente , b . ds_fantasia , a . cd_vendedor , c . nm_v
+End report CRM [Fri Jan 10 17:40:09 2014].
+
+Starting report CRM [Fri Jan 10 17:43:47 2014] ...
+End report CRM [Fri Jan 10 17:44:49 2014].
+
+Starting report CRM [Fri Jan 10 17:44:58 2014] ...
+End report CRM [Fri Jan 10 17:45:02 2014].
+
+Starting report CRM [Fri Jan 10 17:45:09 2014] ...
+End report CRM [Fri Jan 10 17:45:10 2014].
+
+Starting report CRM [Fri Jan 10 17:46:37 2014] ...
+End report CRM [Fri Jan 10 17:46:40 2014].
+
+Starting report CRM [Fri Jan 10 17:46:59 2014] ...
+End report CRM [Fri Jan 10 17:47:01 2014].
+
+Starting report CRM [Fri Jan 10 17:47:08 2014] ...
+End report CRM [Fri Jan 10 17:47:13 2014].
+
+Starting report CRM [Fri Jan 10 17:47:17 2014] ...
+ORA-00904: "DEC": invalid identifier
+select decode ( : tp_quebra , 'R' , a . dt_retorno , a . dt_hr ) dt_quebra , decode ( : tp_quebra , 'R' , 'Data Retorno: ' , 'Data Contato: ' ) quebra_prompt , a . dt_hr , a . dt_retorno , a . cd_cliente , b . ds_fantasia , a . cd_vendedor , c . nm_v
+End report CRM [Fri Jan 10 17:47:18 2014].
+
+Starting report CRM [Fri Jan 10 17:47:22 2014] ...
+End report CRM [Fri Jan 10 17:47:24 2014].
+
+Starting report CRM [Fri Jan 10 17:47:58 2014] ...
+End report CRM [Fri Jan 10 17:48:06 2014].
+
+Starting report CRM [Fri Jan 10 17:48:30 2014] ...
+End report CRM [Fri Jan 10 17:48:41 2014].
+
+Starting report CRM [Fri Jan 10 17:50:07 2014] ...
+End report CRM [Fri Jan 10 17:50:24 2014].
+
+Starting report CRM [Fri Jan 10 17:50:37 2014] ...
+End report CRM [Fri Jan 10 17:50:42 2014].
+
+Starting report CRM [Fri Jan 10 17:50:45 2014] ...
+End report CRM [Fri Jan 10 17:50:47 2014].
+
+Starting report CRM [Fri Jan 10 17:51:03 2014] ...
+End report CRM [Fri Jan 10 17:51:05 2014].
+
+Starting report CRM [Fri Jan 10 17:51:15 2014] ...
+End report CRM [Fri Jan 10 17:51:27 2014].
+
+Starting report CRM [Fri Jan 10 17:51:29 2014] ...
+End report CRM [Fri Jan 10 17:51:33 2014].
+
+Starting report CRM [Fri Jan 10 17:51:38 2014] ...
+End report CRM [Fri Jan 10 17:51:41 2014].
+
+Starting report CRM [Fri Jan 10 17:51:48 2014] ...
+End report CRM [Fri Jan 10 17:51:50 2014].

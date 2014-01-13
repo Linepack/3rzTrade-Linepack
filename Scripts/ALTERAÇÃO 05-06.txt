@@ -1,0 +1,10 @@
+ALTERA TABELA FTPEDIDO
+
+TP_FRETE varcharchar2(3)
+
+
+======================
+ALTERA TABELA GEENDERE
+
+MODIFY  LOGRA VARCHAR2(60)
+===========================

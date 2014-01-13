@@ -1,0 +1,204 @@
+create table GEPAIS(
+	cd_pais		number(3),
+	ds_pais		varchar2(30) NOT NULL,
+constraint pk_GEpais_cd_pais  primary key (cd_pais))
+/
+
+
+
+create table GEestado(
+	sg_estado	varchar2(3),
+	ds_estado	varchar2(30)NOT NULL ,
+	cd_pais		number(3),
+constraint pk_GEestado_sg_estado primary key (sg_estado),
+constraint fk_GEestado_pais_cd_pais foreign key (cd_pais)
+references GEpais(cd_pais))
+/
+
+
+
+create table gecidade(
+	cd_cidade	number(5),
+	ds_cidade	varchar2(30) NOT NULL,
+	ddd		number(3),
+	cep_geral		number(15),
+	sg_estado	varchar2(3),
+constraint pk_GEcidade_cd_cidade primary key(cd_cidade),
+constraint fk_GEcidade_estado_cd_estado foreign key (sg_estado)
+references GEestado(sg_estado)
+)
+/
+
+create table GECONPAG(
+	cd_condicao	number(3),
+	ds_condicao	varchar2(30),
+constraint pk_GEconPAG_CD_CONDICAO primary key (cd_condicao)
+)
+/
+
+create table GEPAGPAR(
+	cd_condicao	number(3),
+	nr_PARC		number(2),
+	pc_parc		number(6,2),
+	pz_parc		number(6,2),
+constraint fk_geconpag_gepagpar_cd_con foreign key (cd_condicao)
+references geconpag(cd_condicao)
+)
+/
+
+
+create table gefornec(
+	cd_forn			number(4),
+	tp_fornecedor		char(1) ,
+	ds_razao		varchar2(60),
+	ds_fantasia		varchar2(30),
+	cpf_cnpj		number(18),
+	insc_est		number(18),
+	st_forn			char(1) NOT NULL,
+	comm			number(5,2),
+	obs			varchar2(50),
+constraint pk_GEfornEC_cd_forn primary key (cd_forn),
+constraint ck_GEFORNEC_tp_fornecedor check(tp_fornecedor in ('J','F','E')),
+constraint ck_GEFORNEC_st_forn check(st_forn in ('A','I'))
+)
+/
+
+create table gevended(
+	cd_vendedor	number(4),
+	nm_vendedor	varchar2(50),
+	comm_vend	number(5,2),
+constraint pk_gevended_cd_vendedor primary key (cd_vendedor))
+/
+
+
+
+create table GEclient(
+	cd_cliente		number(4),
+	tp_cliente		char(1) NOT NULL,
+	ds_razao		varchar2(60),
+	ds_fantasia		varchar2(30),
+	cpf_cnpj		number(17),
+	insc_est		number(17),
+	st_cliente		char(1) NOT NULL,
+	obs			long,
+constraint pk_GEclient_cd_cliente primary key (cd_cliente),
+constraint ck_GECLIENT_tp_cliente check(tp_cliente in ('J','F','E')),
+constraint ck_GECLIENT_st_cliente check(st_cliente in ('A','I'))
+)
+/
+
+
+
+create table GEENDERE(
+	sq_end		number(4) not null,
+	tp_end		char(1) not null,
+	BAIRRO		VARCHAR2(30),
+	logra		varchar2(30),
+	comple		varchar2(30),
+	tel		number(10),
+	fax		number(10),
+	CONTATO		VARCHAR2(30),
+	EMAIL		VARCHAR2(50),
+	cep		number(8),
+	cd_cidade	number(4),
+	cd_cliente	number(4),
+	CD_FILIAL_CLIENTE	NUMBER(5),
+	cd_forn		number(4),
+constraint  ck_GEENDERE_tp_end check(tp_end in ('R','C')),
+constraint fk_GEENDERE_GEcidade_cd_cid foreign key (cd_cidade)
+references GECIDADE(cd_cidade),
+constraint fk_GEENDERE_GEclient_CD_CLI foreign key (cd_cliente)
+references GEclient(cd_cliente),
+constraint fk_GEENDERE_GEfornec_cd_forn foreign key (cd_forn)
+references gefornec(cd_forn)
+)
+/
+
+create table GEUNIMED(
+	CD_UNIMED	VARCHAR2(5),
+	DS_UNIMED	VARCHAR2(15),
+CONSTRAINT PK_GEUNIMED_CD_UNIMED PRIMARY KEY(CD_UNIMED)
+)
+/
+
+
+create table esitemes(
+	cd_item 	number(5),
+	ds_item		varchar2(50),
+constraint pk_esitemes_cd_item primary key (cd_item)
+)
+/
+
+create table esitefor (
+	cd_item number(5),
+	cd_forn number(4),
+	comm	number(5,2),
+constraint fk_esitefor_esitemes_cd_item foreign key (cd_item)
+references esitemes (cd_item),
+constraint fk_esitefor_gefornec_cd_forn foreign key(cd_forn)
+references gefornec (cd_forn)
+)
+/
+
+
+create table ftpedido(
+	nr_ped		number(5),
+	dt_ped		date,
+	cd_forn		number(4),
+	cd_cliente	number(4),
+	cd_filial	number(4),
+	cd_vendedor	number(4),
+constraint pk_ftpedido_nr_ped primary key(nr_ped),
+constraint fk_ftpedido_gefornec_cd_forn foreign key (cd_forn)
+references gefornec(cd_forn),
+constraint fk_ftpedido_geclient_cd_cli foreign key(cd_cliente)
+references geclient(cd_cliente),
+constraint fk_ftpedido_gevended_cd_ven foreign key (cd_vendedor)
+references gevended (cd_vendedor)
+)
+/
+
+create table ftiteped(
+	nr_ped		number(5),
+	sq_ped		number(3),
+	cd_item 	number(5),
+	cd_unimed 	varchar2(5),
+	qt_ped		number(15,5),
+	vl_unitario	number(15,5),
+constraint fk_ftiteped_ftpedido_nr_ped foreign key(nr_ped)
+references ftpedido(nr_ped),
+constraint fk_ftpedido_esitemes_cd_item foreign key (cd_item)
+references esitemes (cd_item),
+constraint fk_ftpedido_geunimed_cd_un foreign key (cd_unimed)
+references geunimed (cd_unimed)
+)
+/
+
+create table ftprzped(
+	nr_ped		number(5),
+	dt_entrega	date,
+	hr_entrega	number(4),
+	qt_entrega	number(15,5),
+	cd_filial	number(4),
+constraint fk_ftprzped_ftpedido_nr_ped foreign key (nr_ped)
+references ftpedido(nr_ped)
+)
+/
+
+
+create table ftpedpag(
+	nr_ped	number(5),
+	cd_condicao number(3),
+        nr_PARC		number(2),
+	pc_parc		number(10,4),
+	pz_parc		date,
+constraint fk_ftpagped_ftpedido_nr_ped foreign key(nr_ped)
+references ftpedido(nr_ped),
+constraint fk_ftpedpag_geconpag_CD_CON foreign key (cd_condicaO)
+references geconpag(cd_condicao)
+)
+/
+	
+	
+
+

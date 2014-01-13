@@ -1,0 +1,1 @@
+expdp zr3/zr3@xe directory=dir_backup_zr3 dumpfile=backup.dmp logfile=backup.txt

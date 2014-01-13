@@ -1,0 +1,52 @@
+;;; 
+Export: Release 10.2.0.1.0 - Production on Sábado, 11 Janeiro, 2014 19:29:40
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+;;; 
+Conectado a: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Iniciando "ZR3"."SYS_EXPORT_SCHEMA_01":  zr3/********@xe directory=dir_backup_zr3 dumpfile=backup.dmp logfile=backup.txt 
+Estimativa em andamento com o método BLOCKS...
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/TABLE_DATA
+Estimativa total usando o método de BLOCKS: 1.875 MB
+Processando o tipo de objeto SCHEMA_EXPORT/USER
+Processando o tipo de objeto SCHEMA_EXPORT/SYSTEM_GRANT
+Processando o tipo de objeto SCHEMA_EXPORT/ROLE_GRANT
+Processando o tipo de objeto SCHEMA_EXPORT/DEFAULT_ROLE
+Processando o tipo de objeto SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+Processando o tipo de objeto SCHEMA_EXPORT/SEQUENCE/SEQUENCE
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/TABLE
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/COMMENT
+Processando o tipo de objeto SCHEMA_EXPORT/FUNCTION/FUNCTION
+Processando o tipo de objeto SCHEMA_EXPORT/PROCEDURE/PROCEDURE
+Processando o tipo de objeto SCHEMA_EXPORT/FUNCTION/ALTER_FUNCTION
+Processando o tipo de objeto SCHEMA_EXPORT/PROCEDURE/ALTER_PROCEDURE
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Processando o tipo de objeto SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Processando o tipo de objeto SCHEMA_EXPORT/JOB
+. . exportou "ZR3"."FTCONPAG"                            174.5 KB    4265 linhas
+. . exportou "ZR3"."FTITEPED"                            188.9 KB    7669 linhas
+. . exportou "ZR3"."FTPEDIDO"                            143.4 KB    4273 linhas
+. . exportou "ZR3"."FTPRZPED"                            125.3 KB    4324 linhas
+. . exportou "ZR3"."GECLIENT"                            44.78 KB     240 linhas
+. . exportou "ZR3"."ESITEFOR"                            8.242 KB     194 linhas
+. . exportou "ZR3"."ESITEMES"                            8.789 KB     129 linhas
+. . exportou "ZR3"."FTCOMVEN"                            7.406 KB      10 linhas
+. . exportou "ZR3"."FTITEPRZ"                            6.242 KB      14 linhas
+. . exportou "ZR3"."GECIDADE"                            8.804 KB     103 linhas
+. . exportou "ZR3"."GECONPAG"                            5.757 KB      15 linhas
+. . exportou "ZR3"."GECRM"                               10.28 KB       5 linhas
+. . exportou "ZR3"."GEENDERE"                            27.32 KB     270 linhas
+. . exportou "ZR3"."GEESTADO"                            5.820 KB      11 linhas
+. . exportou "ZR3"."GEFORNEC"                            9.179 KB      24 linhas
+. . exportou "ZR3"."GEPAIS"                              5.296 KB       2 linhas
+. . exportou "ZR3"."GESEGMEN"                            5.343 KB       3 linhas
+. . exportou "ZR3"."GEUNIMED"                            5.304 KB       6 linhas
+. . exportou "ZR3"."GEVENDED"                            5.765 KB       8 linhas
+Tabela-mestre "ZR3"."SYS_EXPORT_SCHEMA_01" carregada/descarregada com sucesso
+******************************************************************************
+Conjunto de arquivos de dump para ZR3.SYS_EXPORT_SCHEMA_01 é:
+  C:\USERS\GIOVANA\DESKTOP\LEANDRO\SISTEMAS\ZR3\FONTES\BACKUP\BACKUP.DMP
+O job "ZR3"."SYS_EXPORT_SCHEMA_01" foi concluído com sucesso em 19:29:57

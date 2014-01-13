@@ -1,0 +1,45 @@
+ create sequence cidade_seq
+ MINVALUE    1
+ MAXVALUE     99999
+ INCREMENT BY   1
+ nocycle
+ ORDER
+ noCACHE;
+=================================================
+create user &USER  
+identified by &SENHA
+DEFAULT TABLESPACE users
+=====================================
+alter &user USER account unlock
+====================================
+grant create session,
+        create synonym,
+ 	create table,
+	create procedure,
+	CREATE SEQUENCE
+     to &USER
+===================================================
+ALTER USER &USER QUOTA UNLIMITED ON USERS
+========================================================
+
+GRANT SELECT, UPDATE, INSERT, DELETE ON &TABELA TO &USER
+============================================================
+CREATE SYNONYM &TABELA FOR &SCHEMA_TABELA
+=============================================================
+GEPAIS          
+GEESTADO        
+GECIDADE        
+GECONPAG        
+GEFORNEC        
+GEVENDED        
+GECLIENT        
+GEUNIMED        
+ESITEMES        
+ESITEFOR        
+FTPEDIDO        
+FTITEPED        
+FTPRZPED        
+FTCONPAG        
+GEENDERE        
+
+
